@@ -1,0 +1,67 @@
+.ad-console {
+    overflow-y: auto;
+    position: relative;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+.ad-console.ad-standard-alone {
+    position: fixed;
+    bottom: 5px;
+    left: 5px;
+    right: 5px;
+    height: 30vh;
+    backgroundColor: white;
+    border: 1px solid #ddd;
+    z-index: 10000;
+}
+
+button.ad-console-toggle{
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    z-index: 20000;
+    border-radius: 50%;
+    padding: 0;
+    width: 3em;
+    height: 3em;
+    outline: none;
+}
+
+
+.ad-console::after {
+    content: "console";
+    display: inline-block;
+    padding: 5px;
+    pointer-events: none;
+    color: gray;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.ad-log-group:not(:first-child),
+.ad-log-error:not(:first-child) {
+    border-top: 1px rgba(128, 128, 128, 0.41) solid;
+}
+
+.ad-log-group-trace {
+    color: aquamarine;
+    display: block;
+    text-align: right;
+}
+
+.ad-log-error {
+}
+
+.ad-log-error-message {
+    color: red;
+}
+
+.ad-log-error-at {
+    color: #013d3d;
+}
+
+.ad-log-error-stack {
+    white-space: pre-wrap;
+}
