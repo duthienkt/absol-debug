@@ -117,7 +117,7 @@ DConsole.auto = function () {
         class: 'ad-standard-alone'
     });
     this.$shareInstance = $elt;
-    console['l' + 'og'] = $elt.log.bind(this.$elt);
+    console['l' + 'og'] = $elt.log.bind($elt);
     window.addEventListener('error', function (event) {
         $elt.showError({
             lineno: event.lineno,

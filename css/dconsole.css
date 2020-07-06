@@ -11,7 +11,7 @@
     left: 5px;
     right: 5px;
     height: 30vh;
-    backgroundColor: white;
+    background-color: white;
     border: 1px solid #ddd;
     z-index: 10000;
 }
