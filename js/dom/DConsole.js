@@ -41,12 +41,11 @@ DConsole.prototype._makeViewOf = function (value) {
 
     }
     else if (value.type && value.target) {
-        value = this._makeEventObject(value);
+        value = JSON.stringify(this._makeEventObject(value),null, 4);
     }
     else {
         value = JSON.stringify(value, null, 4);
     }
-    console.info(value)
     return _({
         tag: 'dstring',
         props: {
@@ -102,6 +101,7 @@ DConsole.prototype.showError = function (error) {
 };
 
 DConsole.prototype.log = function () {
+    this._autoScrollIfNeed();
     var logGroup = _('.ad-log-group');
     for (var i = 0; i < arguments.length; ++i) {
         logGroup.addChild(this._makeViewOf(arguments[i]));
