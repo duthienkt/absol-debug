@@ -1,6 +1,6 @@
 {
   "name": "absol-debug",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Debug tool for absol.js",
   "main": "index.js",
   "scripts": {
